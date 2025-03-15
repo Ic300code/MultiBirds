@@ -5,7 +5,12 @@ const http = require('http');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = require('socket.io')(server, {
+    cors: {
+        origin: "https://multibirds.onrender.com", // Permet uniquement à ce domaine de se connecter
+        methods: ["GET", "POST"]
+    }
+});
 
 app.use(express.static(path.join(__dirname, "public")));
 
