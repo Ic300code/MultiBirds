@@ -1,15 +1,16 @@
 const express = require('express');
 const socketIo = require('socket.io');
 const path = require('path');
+const http = require('http');
 
 const app = express();
-const server = require('http').Server(app);
+const server = http.createServer(app);
 const io = socketIo(server);
 
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 let pipes = [];
