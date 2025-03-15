@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "FlappyBird";
+    src: url("FlappyBirdRegular-9Pq0.ttf");
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+    margin: 0;
+
+    background-color: rgb(45, 42, 61);
+}
+
+img {
+    position: absolute;
+    z-index: -1;
+
+    width: 100vw;
+    opacity: .2;
+}
+
+h1, h3 {
+    font-family: "FlappyBird";
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    font-weight: 100;
+
+    height: 3vh;
+
+    justify-content: center;
+}
+
+button {
+    width: 20vw;
+    height: 10vh;
+
+    border: .8vh solid rgb(129, 56, 8);
+
+    font-family: "FlappyBird";
+    font-weight: 100;
+    font-size : 10vh;
+    color: rgb(255, 255, 255);
+
+    background-color: rgb(219, 88, 0);
+}
+
+#screen {
+    position: absolute;
+
+    background-color: white;
+
+    z-index: 1;
+}
+
+#score {
+    position: absolute;
+    font-size: 10vh;
+
+    z-index: 10;
+}
+
+#stats {
+    background-color: rgb(185, 157, 125);
+    border: .8vh solid rgb(133, 109, 82);
+
+    width: 30vw;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#gameOver {
+    display: flex;
+    flex-direction: column;
+
+    z-index: 15;
+
+    gap: 2vh;
+
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
