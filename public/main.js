@@ -33,7 +33,7 @@ let canJump = true;
 
 const ratio = 320 / 52;
 
-const speed = 160;
+const speed = 185;
 let x = 0;
 
 let t = 0;
