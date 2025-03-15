@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server, {
     cors: {
-        origin: "https://multibirds.onrender.com", // Permet uniquement à ce domaine de se connecter
+        origin: ["https://multibirds.onrender.com", "https://serve.gamejolt.net"], 
         methods: ["GET", "POST"]
     }
 });
