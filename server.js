@@ -39,10 +39,11 @@ io.on('connection', (socket) => {
     const id = socket.id;
 
     socket.on("requestPlayers", () => {
+        socket.emit("pipes", pipes);
+        
         for (let id in players) {
             if (id === socket.id) {continue}
             io.emit("playerAdded", id);
-            socket.emit("pipes", pipes);
         }
     })
 
