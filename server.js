@@ -29,7 +29,6 @@ io.on('connection', (socket) => {
     console.log('Player Connected !');
 
     io.emit("playerAdded", socket.id);
-    socket.emit("pipes", pipes);
 
     players[socket.id] = {
         x: 0,
@@ -43,6 +42,7 @@ io.on('connection', (socket) => {
         for (let id in players) {
             if (id === socket.id) {continue}
             io.emit("playerAdded", id);
+            socket.emit("pipes", pipes);
         }
     })
 
